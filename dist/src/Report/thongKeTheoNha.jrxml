@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="879501d0-dc82-4c79-8be0-e519ed2b949c">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="DSThongKeTheoNha" uuid="6b820958-9ae0-4f9c-809d-bced8290780a">
+		<parameter name="dsNamHoc" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select tb_Nha.TenNha, tb_XepPhong.HocKy, COUNT(tb_SinhVien.MaKTX) as TongSV
+	from tb_SinhVien, tb_Truong, tb_XepPhong, tb_Nha
+	where tb_SinhVien.MaTruong = tb_Truong.MaTruong
+		  and tb_SinhVien.MaKTX = tb_XepPhong.MaKTX
+		  and tb_Nha.MaNha = tb_XepPhong.MaNha
+		  and tb_XepPhong.NamHoc = '2016-2017'
+	group by tb_Nha.TenNha, tb_XepPhong.HocKy]]>
+		</queryString>
+		<field name="TenNha" class="java.lang.String"/>
+		<field name="HocKy" class="java.lang.String"/>
+		<field name="TongSV" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="namHoc" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select 1]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="93" forecolor="#FFFFFF" backcolor="#999999" uuid="259da122-b7cf-4ff0-bd71-f7c294d43f96"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THỐNG KÊ SINH VIÊN THEO NHÀ
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="124" width="555" height="20" forecolor="#666666" backcolor="#CCCCCC" uuid="b34d23e1-3d5a-450a-a82c-17ee1e3cef10"/>
+				<textElement>
+					<font fontName="Calibri" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Số sinh viên theo từng nhà:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="38" width="555" height="39" forecolor="#FFFFFF" uuid="159f6f9e-6743-4732-9dd3-db6c906e00ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namHoc}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table" style="table" x="14" y="147" width="526" height="80" uuid="686d0059-3190-496d-9076-32d76d30ca24"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DSThongKeTheoNha" uuid="6ac2874b-12c5-4d59-9a81-b7925fd55b3b">
+						<datasetParameter name="dsNamHoc">
+							<datasetParameterExpression><![CDATA[$P{namHoc}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="116" uuid="59edf33c-4d80-46ad-9f22-aa110c230b81">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="116" height="30" forecolor="#666666" uuid="ab5e5067-f6c9-4a2a-851d-1b19c0217488"/>
+								<textElement textAlignment="Center" verticalAlignment="Top"/>
+								<text><![CDATA[TenNha]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="3" y="0" width="113" height="20" forecolor="#666666" uuid="96408932-9117-4c55-a80a-c47a7512e7a6"/>
+								<textFieldExpression><![CDATA[$F{TenNha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="173" uuid="c067d249-db45-45f8-ab5a-baedfa051f4a">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" forecolor="#666666" uuid="7de24fbb-6df8-4fb3-9535-006582349b72"/>
+								<textElement textAlignment="Center" verticalAlignment="Top"/>
+								<text><![CDATA[HocKy]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="3" y="0" width="117" height="20" forecolor="#666666" uuid="ba0f7122-7770-40e5-844b-76afab684949"/>
+								<textFieldExpression><![CDATA[$F{HocKy}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="238" uuid="2ba00f75-5112-4978-9dde-93eca5efa8c0">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="111" height="30" forecolor="#666666" uuid="b7e9eb25-db9d-480d-977f-fb31e786a0c2"/>
+								<textElement textAlignment="Center" verticalAlignment="Top"/>
+								<text><![CDATA[TongSV]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="3" y="0" width="108" height="20" forecolor="#666666" uuid="e4d493ab-8ea1-4042-b271-a3fbb0936d5d"/>
+								<textFieldExpression><![CDATA[$F{TongSV}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

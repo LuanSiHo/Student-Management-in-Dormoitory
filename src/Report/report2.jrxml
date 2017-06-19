@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="623" pageHeight="340" orientation="Landscape" columnWidth="583" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a88e8ad-d439-4ba0-9e26-a0d37ee1f463">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tenSV" class="java.lang.String"/>
+	<parameter name="tenTruong" class="java.lang.String"/>
+	<parameter name="phongKTX" class="java.lang.String"/>
+	<parameter name="noiDungThu" class="java.lang.String"/>
+	<parameter name="soTien" class="java.lang.String"/>
+	<parameter name="ngay" class="java.lang.String"/>
+	<parameter name="thang" class="java.lang.String"/>
+	<parameter name="nam" class="java.lang.String"/>
+	<parameter name="maThu" class="java.lang.String"/>
+	<parameter name="currentDir" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[Select 1]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="300" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="82" height="111" uuid="959b7efd-09e6-4fb6-8c1b-1ccb89fbb3ae"/>
+				<imageExpression><![CDATA[$P{currentDir} + "/src/Images/KTX.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="442" y="208" width="100" height="20" uuid="a0ee5838-60a0-4e53-86ec-02def3f0e525"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Người thu tiền]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="101" width="56" height="20" uuid="bc96a618-0407-4536-b5ea-d083bdb933a4"/>
+				<text><![CDATA[Phòng KTX:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="280" width="49" height="20" uuid="9359d90f-8f17-47e1-b69b-4d3121703b32"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[*Ghi chú:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="280" width="239" height="20" uuid="e72a1edf-714c-4b97-acae-96bf4f584f9b"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Giữ biên lai cẩn thận, không làm mất mát, hư hỏng.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="101" width="280" height="20" uuid="3c65db93-7541-4bec-abf2-dfc4796ce090"/>
+				<text><![CDATA[.................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="161" width="537" height="20" uuid="4a2c0a9a-8cae-455f-9f6c-03e44ba1d807"/>
+				<text><![CDATA[.............................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="218" width="100" height="20" uuid="2585477d-a59e-41b9-a973-bf92b55a5493"/>
+				<text><![CDATA[(Ký, ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="121" width="512" height="20" uuid="66d0555c-95fb-46d6-9936-1d788acd895c"/>
+				<text><![CDATA[............................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="20" width="130" height="20" uuid="fcb5ab27-3567-48d4-ba80-07b40ed9b1b0"/>
+				<text><![CDATA[Độc lập - Tự do - Hạnh phúc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="20" width="167" height="43" uuid="c2b93210-12e5-40e4-abaf-593023c98b24"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[KP 6, Phường Linh Trung, Quận Thủ Đức
+Điện thoại: (08) 3838 3838
+Mã số thuế: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="10" width="148" height="20" uuid="eddcd114-0769-41a6-88fe-18fe012ffedc"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRUNG TÂM QUẢN LÝ KÝ TÚC XÁ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="121" width="67" height="20" uuid="077e8bb6-4f36-4812-bad1-d27ad13149ef"/>
+				<text><![CDATA[Nội dung thu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="141" width="573" height="20" uuid="4564d423-b263-4030-ba0a-8691307cbe19"/>
+				<text><![CDATA[.............................................................................................................................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="81" width="38" height="20" uuid="f9555d8a-d97b-423d-a971-7b5adcb5eda5"/>
+				<text><![CDATA[Trường: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="101" width="182" height="20" uuid="b55aefed-5f24-4a18-93d2-7341720e4cfe"/>
+				<text><![CDATA[.................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="81" width="200" height="20" uuid="a3fd9448-f9e8-4762-b8dc-f564d7fe9a63"/>
+				<text><![CDATA[.................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="43" width="183" height="20" uuid="496c2ca5-92b9-4ad3-a73d-41438c3e863a"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BIÊN LAI THU TIỀN PHÍ NỘI TRÚ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="10" width="33" height="20" uuid="9d533b4b-ce5e-4dde-9b3f-5aade82d29f3"/>
+				<text><![CDATA[Số: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="161" width="100" height="20" uuid="7b49e901-a0b9-4427-83c6-cbb4e5431fd3"/>
+				<text><![CDATA[Số tiền:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="188" width="183" height="20" uuid="7716de47-4e2a-49e5-9e05-a9747d7a81fb"/>
+				<text><![CDATA[Ngày ......... tháng .......... năm .............]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="81" width="249" height="20" uuid="5ca5bae1-a438-42d9-8d3c-118f93e31aa6"/>
+				<text><![CDATA[.................................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="81" width="85" height="20" uuid="be9fb0b5-6864-47cc-b6ea-0fd984005e30"/>
+				<text><![CDATA[Họ, tên sinh viên: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="101" width="54" height="20" uuid="dffb5226-7eeb-44a5-83c9-79922d2681a7"/>
+				<text><![CDATA[Khóa học:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="10" width="203" height="20" uuid="b6272342-e5b8-4e80-adb5-fce107ff127e"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="99" y="79" width="239" height="20" uuid="6ad06391-e93c-4160-adfe-0151b5abbd07"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tenSV}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="79" width="197" height="20" uuid="54394f36-f1dc-4dd9-85e3-ed38c3993e45"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tenTruong}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="98" width="169" height="20" uuid="d7f5544b-3070-4d44-ab32-e65995c12e6b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{phongKTX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="119" width="373" height="20" uuid="818d9b0e-3521-4a28-942e-c77d84e096af"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noiDungThu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="159" width="100" height="20" uuid="b3dc5b9e-f953-4407-9ece-89bff289be22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{soTien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="186" width="46" height="20" uuid="c3d8f778-a319-428e-a5c9-b62cad65e0aa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ngay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="186" width="46" height="20" uuid="921515dc-0566-4559-9ab5-b4f9b53ec0c7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{thang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="522" y="186" width="45" height="20" uuid="efd592c9-c740-4520-b660-eb2b098f629d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="10" width="100" height="20" uuid="e959f25d-733a-49d0-a4b6-ebf3fa24dcdc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{maThu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="142" y="40" width="100" height="20" uuid="3d9538b3-4bcc-40a7-a2de-cb68dd860e50"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[0304248683]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="386" y="260" width="197" height="20" uuid="9c3ae459-d976-4450-9e80-07efd3885785"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

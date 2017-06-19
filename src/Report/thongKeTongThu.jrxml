@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="552" pageHeight="802" columnWidth="552" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f459792a-cdf1-499d-881f-03e277e86dd7">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="96"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="c1b2863b-6847-4f30-badf-392c8c24a984"/>
+	<subDataset name="Table Dataset 2" uuid="0dda837b-1afb-4839-a5e5-099bda865533"/>
+	<parameter name="ngay" class="java.lang.String"/>
+	<parameter name="thang" class="java.lang.String"/>
+	<parameter name="nam" class="java.lang.String"/>
+	<parameter name="namHoc" class="java.lang.String"/>
+	<parameter name="hocKy" class="java.lang.String"/>
+	<parameter name="tongThu" class="java.lang.String"/>
+	<parameter name="tienHoanTra" class="java.lang.String"/>
+	<parameter name="tienDienNuoc" class="java.lang.String"/>
+	<parameter name="tongCong" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select 1]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="551" height="91" forecolor="#FFFFFF" backcolor="#999999" uuid="2a3a3c1c-2689-4b20-aea5-455365ff4960"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THỐNG KÊ TỔNG THU KÝ TÚC XÁ
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="114" width="183" height="20" uuid="564bea20-56d3-4726-91f1-ba3021afec1e"/>
+				<text><![CDATA[Ngày ......... tháng .......... năm .............]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="404" y="112" width="47" height="20" uuid="0076489e-1861-4956-ab44-eeb5a25800ae"/>
+				<textFieldExpression><![CDATA[$P{ngay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="112" width="51" height="20" uuid="7adeaf10-9ddf-4bad-90ae-854a122c2d6e"/>
+				<textFieldExpression><![CDATA[$P{thang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="112" width="41" height="20" uuid="a3c8614e-29f9-409b-b6ac-d75f805c8b94"/>
+				<textFieldExpression><![CDATA[$P{nam}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="191" width="551" height="32" forecolor="#666666" backcolor="#CCCCCC" uuid="fd17792c-81e4-4140-aa1c-0a6c5eff8715"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Tổng thu phí nội trú:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="42" width="551" height="35" forecolor="#FFFFFF" uuid="dc24d4b2-72f1-482a-8b5f-684345c8e306"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namHoc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="191" width="200" height="32" forecolor="#666666" uuid="13642314-c610-46fe-94cd-7edc5f88e71b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tongThu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="225" width="551" height="32" forecolor="#CCCCCC" backcolor="#666666" uuid="5eaeab2c-af2f-4446-a37a-302163cae346"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Tổng thu phí điện nước:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="259" width="551" height="32" forecolor="#666666" backcolor="#CCCCCC" uuid="941bb795-4358-4f49-98cb-6d8758678ddd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Tiền hoàn trả:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="257" width="200" height="34" forecolor="#666666" uuid="2e591c50-c550-4081-a939-a4f276a8d9a0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tienHoanTra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="225" width="200" height="32" forecolor="#CCCCCC" uuid="0e1f37d4-9ca2-4220-aaeb-5ef4eceeb728"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tienDienNuoc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="251" y="291" width="300" height="30" forecolor="#666666" backcolor="#E8E8E8" uuid="908cf817-7dfc-48e7-8e9e-180d6a44218a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Tổng cộng:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="291" width="200" height="30" forecolor="#666666" uuid="2a591bad-56ed-41fa-a68e-6d0552bbd227"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tongCong}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
