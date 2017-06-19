@@ -9,6 +9,7 @@ import DAL.BackupGhiNhanDienNuocDAL;
 import Entities.GhiNhanDienNuocEntity;
 import java.sql.Date;
 
+//back up ghi nhan dien nuoc BLL
 public class BackupGhiNhanDienNuocBLL {
 
     BackupGhiNhanDienNuocDAL backupGhiNhanDienNuocDAL = new BackupGhiNhanDienNuocDAL();
